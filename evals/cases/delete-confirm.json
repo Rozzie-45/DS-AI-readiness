@@ -1,0 +1,23 @@
+{
+  "id": "delete-confirm",
+  "title": "Delete with confirmation",
+  "prompt": "On a list of bookings, each row has a way to delete the booking. Deleting cannot be undone, so the user must confirm first. Build the screen as a React component.",
+  "notes": ["components/dialog.md", "components/button.md", "components/icon-button.md", "components/table.md"],
+  "expect": {
+    "components": ["Dialog", "Button"],
+    "anyOf": [["IconButton", "Button"]]
+  },
+  "mustNot": [
+    { "pattern": "window\\.confirm|\\bconfirm\\(", "why": "Use Dialog, not the browser confirm" },
+    { "pattern": "<button[\\s>]", "why": "Use Magenta Button or IconButton, not a raw <button>" }
+  ],
+  "requires": [
+    { "pattern": "color=\"danger\"", "why": "Destructive confirmation buttons use color=\"danger\" (dialog.md)" },
+    { "pattern": "aria-label=", "why": "Icon-only delete buttons need an aria-label (icon-button.md)" }
+  ],
+  "rubric": [
+    "The dialog title names the action (\"Delete booking\"), the body says it cannot be undone.",
+    "Footer: Cancel (ghost) then Delete (fill), right-aligned, both color=\"danger\".",
+    "Focus returns to the row's delete button when the dialog closes."
+  ]
+}

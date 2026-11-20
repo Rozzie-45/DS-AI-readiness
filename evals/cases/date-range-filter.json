@@ -1,0 +1,24 @@
+{
+  "id": "date-range-filter",
+  "title": "Filter by a range of departure dates",
+  "prompt": "Add a filter so users can see only voyages departing between two dates. Dates before today cannot be chosen.",
+  "notes": ["components/date-range-picker.md", "components/calendar.md", "components/date-picker.md"],
+  "expect": {
+    "components": ["DateRangePicker"],
+    "anyOf": []
+  },
+  "mustNot": [
+    { "pattern": "<DatePicker[\\s>][\\s\\S]*<DatePicker[\\s>]", "why": "One DateRangePicker, not two DatePickers" },
+    { "pattern": "type=\"date\"", "why": "Use DateRangePicker, not native date inputs" }
+  ],
+  "requires": [
+    { "pattern": "minDate", "why": "Past dates are disabled with minDate" },
+    { "pattern": "startInputProps[\\s\\S]*aria-labelledby|aria-labelledby[\\s\\S]*endInputProps", "why": "The fixed aria-label hides the label; name both inputs with aria-labelledby (date-range-picker.md)" },
+    { "pattern": "helperText", "why": "Say the allowed range in helperText (Figma)" }
+  ],
+  "rubric": [
+    "Imports from @ocean-network-express/magenta-react-dates.",
+    "The value is handled as [start, end] from onChange.",
+    "The label names the period (\"Departure between\")."
+  ]
+}

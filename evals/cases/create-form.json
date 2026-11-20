@@ -1,0 +1,24 @@
+{
+  "id": "create-form",
+  "title": "Create booking form",
+  "prompt": "Build a form to create a booking: customer reference (text, required), number of containers (whole number, 1 to 99), container type (one of 20GP, 40GP, 40HC, 45HC), and the estimated departure date. Submit and Cancel at the end.",
+  "notes": ["components/input.md", "components/number-input.md", "components/select.md", "components/segmented.md", "components/date-picker.md", "components/button.md"],
+  "expect": {
+    "components": ["Input", "NumberInput", "DatePicker", "Button"],
+    "anyOf": [["Select", "Segmented", "Radio"]]
+  },
+  "mustNot": [
+    { "pattern": "type=\"date\"", "why": "Use DatePicker, not a native date input" },
+    { "pattern": "<input[\\s>]|<select[\\s>]", "why": "Use Magenta fields, not raw HTML controls" },
+    { "pattern": "type=\"number\"", "why": "Use NumberInput, not Input type=number" }
+  ],
+  "requires": [
+    { "pattern": "label=", "why": "Every field has a label" },
+    { "pattern": "required", "why": "The customer reference is required" }
+  ],
+  "rubric": [
+    "Container type: 4 options, so Segmented or Radio fits as well as Select (Decision Tree: 2–5 options).",
+    "NumberInput uses min/max 1–99.",
+    "Submit (fill) and Cancel (ghost or outline) are right-aligned at the end of the form."
+  ]
+}

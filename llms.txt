@@ -1,0 +1,123 @@
+# Magenta
+
+> AI-readable documentation for Magenta, the React design system of Ocean Network Express (`@ocean-network-express/magenta-react`): rules, design language, tokens, component metadata and usage notes.
+
+<!-- SKELETON (phase 1). From phase 3, scripts/build-llms generates this file from the folder tree. Do not edit it by hand after that. -->
+
+## Start here
+
+- [AGENTS.md](AGENTS.md): rules, source of truth, where to look. Read first.
+- [DESIGN.md](DESIGN.md): design language and principles for judgment calls.
+
+## Tokens
+
+Built from the package code by `scripts/build-tokens.mjs` (ADR 003). Magenta has primitive tokens only; choose one by its role, never by value.
+
+- [tokens/primitive.tokens.json](tokens/primitive.tokens.json): every token with its value, CSS variable, how to write it, roles, status and Figma variable.
+- [tokens/text-styles.tokens.json](tokens/text-styles.tokens.json): one text style per `Text` level and size.
+
+## Foundations
+
+- [Color](foundations/color.md): palettes and the role of each level.
+- [Typography](foundations/typography.md): Noto Sans, font scales and text styles.
+- [Spacing](foundations/spacing.md): the spacing scale and component padding.
+- [Border](foundations/border.md): radius and border width.
+- [Elevation](foundations/elevation.md): shadows.
+- [Z-index](foundations/z-index.md): stacking order of page layers.
+- [Screens](foundations/screens.md): breakpoints and responsive component size.
+- [Iconography](foundations/iconography.md): icon sizes, styles and colors.
+
+## Components
+
+- [contracts/index.json](contracts/index.json): every component exported by `magenta-react`, `magenta-react-dates` and `magenta-react-text-editor`, with its package. Each `contracts/<Name>.json` has its props, options and defaults, recipes, and the token of every style by variant and state. Generated from code.
+- [contracts/figma-components.json](contracts/figma-components.json): component sets of the Figma library (key, node, properties), for the pilot components.
+- [Button](contracts/Button.json) · [usage notes](components/button.md): triggers an action; also how the Figma Button, CTAs button and Floating button sets map to code.
+- [Carousel](contracts/Carousel.json), [CarouselSlideContainer](contracts/CarouselSlideContainer.json), [CarouselSlide](contracts/CarouselSlide.json), [CarouselPrevious](contracts/CarouselPrevious.json), [CarouselNext](contracts/CarouselNext.json), [CarouselIndicator](contracts/CarouselIndicator.json) · [usage notes](components/carousel.md): a sliding series of items with arrows, dots, drag and keyboard, sizes and groups, autoplay and its missing pause control, naming slides; when to use a list or Tabs instead; also how the Figma Carousel, arrow and indicator sets map to code.
+- [Collapse](contracts/Collapse.json) · [usage notes](components/collapse.md): the slide open and closed animation for content you show and hide yourself, the trigger wiring, inert while closed, and when to use Accordion or TreeView instead; code only, no Figma set.
+- [CompactWrapper](contracts/CompactWrapper.json) · [usage notes](components/compact-wrapper.md): a field joined with a select or a button before or after it, with one label and helper text; also how the Figma Before, After and After button wrapper sets map to code.
+- [Dialog](contracts/Dialog.json) · [usage notes](components/dialog.md): a modal window for confirmations, forms and critical information, its sizes and footer actions; also how the Figma Dialog sets map to code.
+- [Accordion](contracts/Accordion.json), [AccordionItem](contracts/AccordionItem.json), [AccordionControl](contracts/AccordionControl.json), [AccordionPanel](contracts/AccordionPanel.json) · [usage notes](components/accordion.md): sections with headers that open and close, separated or stacked, one or many open, controlled state, header content, nesting and keyboard; when to use Collapse, Tabs or TreeView instead; also how the Figma Accordions, Accordion base and Nested Accordion sets map to code.
+- [Breadcrumb](contracts/Breadcrumb.json) · [usage notes](components/breadcrumb.md): the trail of links to the current page from an `items` array, the current page, collapsing with `limit` and the overflow menu, the icon action and its keyboard gap; also how the Figma Breadcrumb, Breadcrumb item and overflow item sets map to code.
+- [LinearProgress](contracts/LinearProgress.json), [CircularProgress](contracts/CircularProgress.json) · [usage notes](components/progress.md): determinate progress of an operation, colors and icons for success and error, value display, labelling, the 320px minimum and the hidden responsive value; when to use Spinner or Stepper instead; also how the Figma Linear and Circular progress bar sets map to code.
+- [Segmented](contracts/Segmented.json), [SegmentedItem](contracts/SegmentedItem.json) · [usage notes](components/segmented.md): one choice among 2–5 related views, modes, filters or sorts, controlled or not, indicator and overflow menu, keyboard; when to use Tabs, Select or ButtonGroup instead; also how the Figma Segmented control and Segment item sets map to code.
+- [Shortcut](contracts/Shortcut.json) · [usage notes](components/shortcut.md): pill buttons for preset time ranges or filters, the active preset with `color` and `aria-pressed`, grouping, the minimum width and `type="button"` in forms; when to use Select, Segmented or Button instead; also how the Figma Calendar shortcut item set maps to code.
+- [Stepper](contracts/Stepper.json), [Step](contracts/Step.json) · [usage notes](components/stepper.md): progress through a multi-step task, linear and non-linear status, clickable steps, icon and number indicators, Back and Next on the page, and its accessibility gaps; when to use Tabs, Breadcrumb or a progress bar instead; also how the Figma Stepper and Step base sets map to code.
+- [Drawer](contracts/Drawer.json), [DrawerHeader](contracts/DrawerHeader.json), [DrawerBody](contracts/DrawerBody.json) · [usage notes](components/drawer.md): a modal panel that slides in from the left or right for filters, forms, navigation or details, its width, scrolling body, trigger, focus and two levels, and when to use Dialog, NonModalDialog or Popover instead; also how the Figma Drawer and Double drawer sets map to code.
+- [Divider](contracts/Divider.json) · [usage notes](components/divider.md): a 1px line between sections or groups of actions, how it sizes in rows and columns, and when tables and tabs draw their own lines instead; also how the Figma Divider set maps to code.
+- [Autocomplete](contracts/Autocomplete.json) · [usage notes](components/autocomplete.md): pick one or more known options by typing, with async loading; when to use Select, SearchInput or TagsInput instead; also how the Figma Autocomplete sets map to code.
+- [Avatar](contracts/Avatar.json) · [usage notes](components/avatar.md): a user's photo, initials or default icon, initials and color rules, and `AvatarGroup`; also how the Figma Avatar sets map to code.
+- [Alert](contracts/Alert.json), [Banner](contracts/Banner.json), [InlineBanner](contracts/InlineBanner.json), [Toast](contracts/Toast.json) · [usage notes](components/feedback-messages.md): feedback messages that inform without asking for a response, and the `message()` API; also how the Figma feedback message sets map to code.
+- [HelperText](contracts/HelperText.json) · [usage notes](components/helper-text.md): the description or validation message under a field, when to use the field's own helperText instead, and how to link a standalone one; also how the Figma helper text layers map to code.
+- [IconButton](contracts/IconButton.json) · [usage notes](components/icon-button.md): an icon-only button, its accessible name and tooltip, and the small close and clear sizes; also how the Figma icon-only and Small icon button sets map to code.
+- [Image](contracts/Image.json), [ImageBase](contracts/ImageBase.json), [Lightbox](contracts/Lightbox.json) · [usage notes](components/image.md): images in fixed ratios, fit, corners, alt text and captions, loading and errors, and the preview Lightbox with its focus and naming gaps; when to use Avatar instead; also how the Figma Image set maps to code.
+- [Indicator](contracts/Indicator.json) · [usage notes](components/indicator.md): count badges and dots on or next to an element, and text badges; when to use a status tag instead; also how the Figma Indicator Badge and Badge sets map to code.
+- [NumberInput](contracts/NumberInput.json) · [usage notes](components/number-input.md): numeric and stepped number fields, limits, decimals, thousand separators, units and ranges, and when to use an Input instead; also how the Figma Number Input sets map to code.
+- [NonModalDialog](contracts/NonModalDialog.json) · [usage notes](components/non-modal-dialog.md): a movable, resizable dialog that leaves the page usable; how to recognize it in Figma designs.
+- [InlineEdit](contracts/InlineEdit.json), [InlineEditControl](contracts/InlineEditControl.json) · [usage notes](components/inline-edit.md): a value edited in place with Input, Select or Textarea, the controlled value and `onModeChange` revert pattern, validation and loading, and its keyboard and focus gaps; when to use a form, Drawer or the data table editing pattern instead; also how the Figma Inline editing item set maps to code.
+- [Input](contracts/Input.json) · [usage notes](components/input.md): short single-line text, including passwords; also how the Figma Text input, Password input and input item sets map to code.
+- [ButtonGroup](contracts/ButtonGroup.json) · [usage notes](components/button-group.md): joined outline neutral buttons for actions of equal weight, and the split button; also how the Figma Button group sets map to code.
+- [Checkbox](contracts/Checkbox.json) · [usage notes](components/checkbox.md): one or more non-exclusive choices, and checkbox groups with `FormCheck`; also how the Figma Checkbox, Checkbox item and Checkbox group sets map to code.
+- [FormCheck](contracts/FormCheck.json) · [usage notes](components/form-check.md): the group around checkboxes, radios or toggles, its label, info tooltip, helper and validation text, what it passes to its children, columns, and its accessibility gaps; also how the Figma Checkbox group and Radio button form group sets map to code.
+- [Link](contracts/Link.json) · [usage notes](components/link.md): navigation in text or on its own, underline and icon rules, and when to use a button instead; also how the Figma Link set maps to code.
+- [List](contracts/List.json) · [usage notes](components/list.md): a vertical collection of items, and the item rules that Select and Menu follow; also how the Figma List page sets map to code.
+- [Menu](contracts/Menu.json) · [usage notes](components/menu.md): a pop-up list of actions or options with header and footer, dropdown, grouped, branched, collapsible and searchable menus; also how the Figma Menu sets map to code.
+- [Pagination](contracts/Pagination.json) · [usage notes](components/pagination.md): moving between pages of results, navigable and editable types, and the table footer with page size and result count wired to TanStack Table; also how the Figma Pagination sets map to code.
+- [Popover](contracts/Popover.json) · [usage notes](components/popover.md): an overlay panel opened by clicking a trigger, its placement, caret and focus handling, and when to use Tooltip, DropdownMenu or Dialog instead; also how the Figma Popover sets map to code.
+- [Radio](contracts/Radio.json) · [usage notes](components/radio.md): one choice from 2 to 5 exclusive options, in a `FormCheck` group; also how the Figma Radio button sets map to code.
+- [SearchInput](contracts/SearchInput.json) · [usage notes](components/search-input.md): free-text search with optional suggestions, and when to use Autocomplete, TagsInput or an Input instead; also how the Figma Search input sets map to code.
+- [Select](contracts/Select.json) · [usage notes](components/select.md): one or several choices from a list of options; also how the Figma Single select, Multiple-select and select base sets map to code.
+- [Textarea](contracts/Textarea.json) · [usage notes](components/textarea.md): multi-line text with a character count, vertical resize and auto-size; also how the Figma Text area sets map to code.
+- [Toggle](contracts/Toggle.json) · [usage notes](components/toggle.md): an on/off switch that applies at once, and when to use a checkbox instead; also how the Figma Toggle sets map to code.
+- [TreeView](contracts/TreeView.json), [TreeItem](contracts/TreeItem.json) · [usage notes](components/tree-view.md): hierarchical data with branches and leaves, open state, single and multiple selection that your code shows with `selected`, checkboxes, branch lines and keyboard; when to use Accordion, List or Menu instead; also how the Figma Tree view item, value item, expand-collapse and indent spacer sets map to code.
+- [Text](contracts/Text.json) · [usage notes](components/text.md): the component that renders text styles, `level`, heading elements with `component`, leaving `size` out, and setting the color yourself; roles and values are in the Typography foundation; also how the Figma text styles map to code.
+- [Timeline](contracts/Timeline.json), [TimelineItem](contracts/TimelineItem.json) · [usage notes](components/timeline.md): events in chronological order, horizontal or vertical, the latest item, custom icons and Tag labels, and the named-color icon bug and its workaround; when to use Stepper or Table instead; also how the Figma Timeline and Timeline Step base sets map to code.
+- [Tooltip](contracts/Tooltip.json) · [usage notes](components/tooltip.md): short informative text on hover or focus, and how to build its trigger; also how the Figma Tooltip sets map to code.
+- [Spinner](contracts/Spinner.json) · [usage notes](components/spinner.md): a loading ring for a page or section, and when components show their own; also how the Figma Loading-animation set maps to code.
+- [Table](contracts/Table.json), [TableContainer](contracts/TableContainer.json), [Thead](contracts/Thead.json), [Tbody](contracts/Tbody.json), [Tfoot](contracts/Tfoot.json), [Tr](contracts/Tr.json), [Th](contracts/Th.json), [Td](contracts/Td.json) · [usage notes](components/table.md): the styled table elements, headers, dividers, nested headers, row spans, cell content and row actions; data table features are patterns built with TanStack Table; also how the Figma Data Table cell, header and row sets map to code.
+- [Tabs](contracts/Tabs.json) · [usage notes](components/tabs.md): sections of related content behind tabs, scrollable, vertical and closable tabs; also how the Figma Tab List and Tab item sets map to code.
+- [TabListGroup](contracts/TabListGroup.json) · [usage notes](components/tab-group.md): named, colored, collapsible groups of tabs, and which of the documented menus exist in code; also how the Figma tab group sets map to code.
+- [TagsInput](contracts/TagsInput.json) · [usage notes](components/tags-input.md): several free values as tags, with separators, validation, limits and inline editing; also how the Figma Tags input sets map to code.
+- [Tag](contracts/Tag.json) · [usage notes](components/tag.md): labels that categorize content or show a status, basic, interactive or removable; also how the Figma Tag sets map to code.
+- [DatePicker](contracts/DatePicker.json), [DateTimePicker](contracts/DateTimePicker.json) · [usage notes](components/date-picker.md): one date (or date and time) typed into a masked field or picked from a calendar, from `magenta-react-dates`; opening only from the trigger, correction and reversion on blur, min/max, step and cylinder time variants, keyboard; when to use a range, month, week or time picker instead; also how the Figma Date picker and Date-Time-Picker sets map to code.
+- [DateRangePicker](contracts/DateRangePicker.json) · [usage notes](components/date-range-picker.md): a start and end date typed into two masked inputs or picked from a dual or single calendar, from `magenta-react-dates`; how picks build and reset the range, autoSort, min/max, preset shortcuts and Reset, and the fixed input names that hide the label (with an `aria-labelledby` workaround); also how the Figma Date-Range-Picker set maps to code.
+- [TimePicker](contracts/TimePicker.json) · [usage notes](components/time-picker.md): a time of day typed as hh:mm or picked from cylinder columns or a step list, from `magenta-react-dates`; string values, `disabledTimes`, min/max that only constrain picks (typed times are not checked), overflow correction, focus lost after a step pick; when to use DateTimePicker or Select instead; also how the Figma Time picker and Time selection menu sets map to code.
+- [MonthPicker](contracts/MonthPicker.json), [MonthRangePicker](contracts/MonthRangePicker.json) · [usage notes](components/month-picker.md): one month or a range of months (YYYY-MM) typed or picked from a month calendar, from `magenta-react-dates`; values on the first day of the month (also the range end), month clamping on blur, the ignored `mode` prop and the unnamed end input; also how the Figma Month Picker, Month-Range-Picker and Month menu sets map to code.
+- [Calendar](contracts/Calendar.json), [DateTimeCalendar](contracts/DateTimeCalendar.json), [DualCalendar](contracts/DualCalendar.json), [SingleDateRangeCalendar](contracts/SingleDateRangeCalendar.json), [MonthCalendar](contracts/MonthCalendar.json), [MonthRangeCalendar](contracts/MonthRangeCalendar.json), [QuarterlyCalendar](contracts/QuarterlyCalendar.json), [QuarterlyRangeCalendar](contracts/QuarterlyRangeCalendar.json), [WeekCalendar](contracts/WeekCalendar.json), [CalendarWrapper](contracts/CalendarWrapper.json) · [usage notes](components/calendar.md): the calendar grids inside every date picker and for a calendar shown on the page, from `magenta-react-dates`; which picker uses which, day states and their tokens, contrast pairs, keyboard, month/year menus that ignore min/max, weekday headers without abbr; also how the Figma Calendar page maps to code.
+- [QuarterlyPicker](contracts/QuarterlyPicker.json), [QuarterlyRangePicker](contracts/QuarterlyRangePicker.json) · [usage notes](components/quarterly-picker.md): one calendar quarter or a range of quarters (YYYY/Qx) typed or picked from a quarter menu, from `magenta-react-dates`; values on the first day of the quarter, Q5/Q0 clamping, fixed input names on the range picker; when to use a Select for fiscal periods; also how the Figma Quarter Picker and Quarter-Range-Picker sets map to code.
+- [WeekPicker](contracts/WeekPicker.json) · [usage notes](components/week-picker.md): one week (YYYY/W00) typed or picked from a week list and calendar, from `magenta-react-dates`; sales vs operation week numbering (`weekType`, set twice), values on the Sunday that starts the week, 53-week years and clamping; also how the Figma Week Picker set maps to code.
+- [Editor](contracts/Editor.json), [EditorContent](contracts/EditorContent.json), [EditorToolbar](contracts/EditorToolbar.json), [ButtonController](contracts/ButtonController.json), [MenuItemController](contracts/MenuItemController.json), the 9 `*Controller` and 10 `*Extension` contracts, [AllowedProtocols](contracts/AllowedProtocols.json) · [usage notes](components/editor.md): the rich text editor from `magenta-react-text-editor` (tiptap): extension and controller pairs, default and compact toolbars, links, text color, attachments, character limit, HTML output with Magenta classes, the unnamed text area and `role="application"` with workarounds, text colors that fail contrast; when to use Textarea instead; also how the Figma Text editor page maps to code.
+
+<!-- One line per component: the meta file and the note. Example:
+- [Button](build/meta/button.meta.json) · [usage notes](components/button.md): triggers an action in the current view.
+-->
+
+## Patterns
+
+- [Data table row selection](patterns/data-table-selection.md): selecting rows with checkboxes or radios, the header checkbox states, disabled rows, and the bulk and batch actions bar, wired to TanStack Table; also how the Figma Selection cell and Batch actions bar sets map to code.
+- [Data table sorting and filtering](patterns/data-table-sort-filter.md): column sort buttons, filter menus and combined sort and filter menus, toolbar sort, search and Reset all, wired to TanStack Table; also how the Figma Multi-filter item and table menu sets map to code.
+- [Data table expandable rows](patterns/data-table-expand.md): rows that open to show details or a subtable, single and multiple expand, Expand all, and the content area styles, wired to TanStack Table; also how the Figma Expand-collapse cell maps to code.
+- [Data table sticky header and pinned columns](patterns/data-table-sticky-pinning.md): container and viewport sticky headers, fixed left and right columns, edge shadows and the column pin menu, wired to TanStack Table; also how the Figma Fixed cell, Fixed header cell and Pin item sets map to code.
+- [Data table columns](patterns/data-table-columns.md): column resizing with minimum widths, column and row drag and drop with dnd-kit, and the show and hide columns menu, wired to TanStack Table; also how the Figma Dnd handle and header settings map to code.
+- [Data table toolbar](patterns/data-table-toolbar.md): the toolbar above a table, download and upload, and the loading and no results states; also how the Figma Data table toolbar set maps to code.
+- [Data table editing](patterns/data-table-editing.md): inline cell, row and full table editing, add, duplicate and delete, validation, change feedback and leaving without saving; also how the Figma input cells and required header map to code.
+
+<!-- One line per note in patterns/. -->
+
+## Checks and evals
+
+- [checks/token-audit.mjs](checks/token-audit.mjs): finds raw values and invented or forbidden tokens in UI code.
+- [checks/note-lint.mjs](checks/note-lint.mjs): checks component notes against the template, the contracts and the tokens.
+- [checks/role-check.mjs](checks/role-check.mjs): checks every color role in `foundations/color.md` against the recipes; the code wins (ADR 005).
+- [build/meta/](build/meta/): one merged record per component export (contract facts plus the note's usage, accessibility and Figma mapping), built by `scripts/build-meta.mjs`; schema in [schemas/component.schema.json](schemas/component.schema.json).
+- [mockups/README.md](mockups/README.md): screens rebuilt with Magenta from a screenshot or a Figma frame by the `/create` skill, one folder per mockup.
+- [evals/README.md](evals/README.md): five task cases and a scorer that measure whether an agent builds correct Magenta UI with this vault.
+
+## Decisions
+
+- [ADR 001](adr/001-color-roles-on-palette-tokens.md): color roles point to palette tokens.
+- [ADR 002](adr/002-semantic-color-token-naming.md): proposed names for semantic color tokens. They do not exist yet.
+- [ADR 003](adr/003-code-led-token-pipeline.md): tokens flow from code to JSON to Figma.
+- [ADR 004](adr/004-sticky-z-index-token.md): proposed `zIndex.sticky` = 2 for sticky table headers. It does not exist yet.
+- [ADR 005](adr/005-code-led-token-proposal.md): semantic and component tokens are proposed from the code; when a role and a component disagree, the component wins.
+- [proposals/semantic-tokens.md](proposals/semantic-tokens.md): the proposed semantic tokens and the components that get component tokens. Proposed only: do not use the names.
+- [reports/token-proposal-review.md](reports/token-proposal-review.md): generated; semantic tokens with the components that use them, and where components differ from a role.

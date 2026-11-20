@@ -1,0 +1,45 @@
+{
+  "id": "save-error",
+  "title": "Error message when saving fails",
+  "prompt": "When the user saves a shipment and the server returns an error, tell the user the save failed and let them retry. When it succeeds, tell them briefly.",
+  "notes": [
+    "components/feedback-messages.md",
+    "components/dialog.md",
+    "components/button.md"
+  ],
+  "expect": {
+    "components": [],
+    "anyOf": [
+      [
+        "message(",
+        "Alert",
+        "InlineBanner"
+      ]
+    ]
+  },
+  "mustNot": [
+    {
+      "pattern": "alert\\(",
+      "why": "Use Magenta feedback, not window.alert"
+    },
+    {
+      "pattern": "<Dialog[\\s>]",
+      "why": "A failed save is not a critical decision: use an alert, not a dialog (Decision Tree)"
+    }
+  ],
+  "requires": [
+    {
+      "pattern": "ALERT|<Alert|<InlineBanner",
+      "why": "An error the user must act on is an alert, or an InlineBanner next to the form it is about; not a toast (feedback-messages.md)"
+    },
+    {
+      "pattern": "\"red\"|RED",
+      "why": "Errors use color red"
+    }
+  ],
+  "rubric": [
+    "Success uses a short toast; failure uses an alert, or an InlineBanner next to the form, with a Retry action.",
+    "FeedbackMessages is rendered once at the app root.",
+    "The message says what failed and what to do, in plain words (Voice: Transparent)."
+  ]
+}

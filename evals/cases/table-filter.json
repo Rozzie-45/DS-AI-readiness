@@ -1,0 +1,21 @@
+{
+  "id": "table-filter",
+  "title": "Shipments table with search and pagination",
+  "prompt": "Show a list of shipments (shipment number, vessel, port of loading, ETD, status) that can be searched by shipment number and is split into pages of 20.",
+  "notes": ["components/table.md", "components/search-input.md", "components/pagination.md", "components/tag.md", "patterns/data-table-toolbar.md"],
+  "expect": {
+    "components": ["Table", "Pagination"],
+    "anyOf": [["SearchInput", "Input"], ["Tag", "Text"]]
+  },
+  "mustNot": [
+    { "pattern": "<table[\\s>]", "why": "Use Magenta Table parts, not a raw <table>" }
+  ],
+  "requires": [
+    { "pattern": "<Th\\b", "why": "Header cells use Th" }
+  ],
+  "rubric": [
+    "The table has a name (TableContainer title or aria-labelledby).",
+    "The search sits in the table toolbar (data-table-toolbar pattern).",
+    "Status uses Tag with a color per status."
+  ]
+}
