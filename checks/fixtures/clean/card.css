@@ -1,0 +1,13 @@
+/* Fixture for checks/token-audit.mjs. Expected: 0 errors, 0 warnings. */
+.card {
+  color: var(--mag-colors-neutral-900);
+  background: var(--mag-colors-white);
+  padding: var(--mag-spacing-12) var(--mag-spacing-24);
+  margin: 0;
+  border: var(--mag-borders-1) solid var(--mag-colors-neutral-200);
+  border-radius: var(--mag-radii-lg);
+  font-size: var(--mag-font-sizes-md);
+  z-index: var(--mag-z-index-dialog);
+  box-shadow: var(--mag-shadows-lg);
+  transition: opacity 0.2s; /* token-audit-ignore: Magenta has no motion tokens yet */
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/component.schema.json",
+  "name": "Button",
+  "description": "Triggers an action in the current view.",
+  "category": "actions",
+  "status": "stable",
+  "source": {
+    "package": "@example/ui",
+    "version": "0.0.0",
+    "export": "Button",
+    "importPath": "@example/ui",
+    "file": "src/components/Button/Button.tsx",
+    "generatedAt": "2026-01-01T00:00:00Z"
+  },
+  "options": {
+    "variant": {
+      "values": ["primary", "secondary", "danger"],
+      "default": "primary",
+      "description": "Visual hierarchy and meaning of the action."
+    },
+    "size": {
+      "values": ["small", "medium", "large"],
+      "default": "medium"
+    }
+  },
+  "props": {
+    "disabled": { "type": "boolean", "default": false },
+    "loading": { "type": "boolean", "default": false, "description": "Shows a spinner and blocks repeat clicks." },
+    "icon": { "type": "React.ReactNode", "slot": true },
+    "children": { "type": "React.ReactNode", "required": true, "slot": true },
+    "onClick": { "type": "(event: React.MouseEvent<HTMLButtonElement>) => void" }
+  },
+  "usage": {
+    "when": [
+      "The user needs to trigger an action, such as saving, submitting or opening a dialog."
+    ],
+    "avoid": [
+      "Navigation to another page. Use Link instead."
+    ],
+    "alternatives": ["Link", "IconButton"]
+  },
+  "rationale": {
+    "summary": "One primary button per view keeps the main action obvious.",
+    "tradeoffs": ["Secondary actions need a second, quieter variant."]
+  },
+  "composition": {
+    "canContain": ["Icon"],
+    "cannotContain": ["Button", "Input"],
+    "order": "Icon comes before the label unless iconPosition is set to end."
+  },
+  "related": ["ButtonGroup"],
+  "tokens": {
+    "used": [
+      "button.background.primary.default",
+      "button.background.primary.hover",
+      "button.text.primary",
+      "color.border.focus"
+    ]
+  },
+  "accessibility": {
+    "role": "button",
+    "keyboard": ["Tab moves focus to the button.", "Enter or Space activates it."],
+    "accessibleName": "The visible label. An icon-only button needs aria-label.",
+    "focus": "Visible focus ring using color.border.focus on every variant.",
+    "contrastPairs": [
+      {
+        "foreground": "button.text.primary",
+        "background": "button.background.primary.default",
+        "minRatio": 4.5,
+        "measured": { "light": 5.2, "dark": 6.1 }
+      }
+    ]
+  },
+  "figma": {
+    "url": "https://www.figma.com/design/FILE_KEY/File?node-id=1-2",
+    "codeConnect": "src/components/Button/Button.figma.tsx",
+    "propMap": [
+      { "figmaProperty": "Type", "figmaValue": "Primary", "codeProp": "variant", "codeValue": "primary" },
+      { "figmaProperty": "State", "figmaValue": "Disabled", "codeProp": "disabled", "codeValue": "true" }
+    ]
+  },
+  "examples": [
+    { "title": "Basic", "path": "src/components/Button/Button.stories.tsx#Basic" },
+    { "title": "Loading", "path": "src/components/Button/Button.stories.tsx#Loading" }
+  ],
+  "deprecated": false,
+  "docs": "components/button.md",
+  "review": {
+    "status": "approved",
+    "reviewedBy": "Name",
+    "reviewedOn": "2026-01-01"
+  }
+}

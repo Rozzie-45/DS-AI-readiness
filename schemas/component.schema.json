@@ -1,0 +1,273 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mds/schemas/component.schema.json",
+  "title": "MDS component metadata",
+  "description": "Machine-readable record for one component, at build/meta/<name>.meta.json. Scripts build it by merging two sources: the package contract (fields marked x-origin: generated) and the component note components/<name>.md (fields marked x-origin: authored). Never edit the build output by hand; edit the source named in x-source instead.",
+  "type": "object",
+  "required": ["name", "description", "category", "status", "source", "options", "props", "usage", "accessibility", "review"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+
+    "name": {
+      "description": "Component name, identical to the export name in the package.",
+      "type": "string",
+      "pattern": "^[A-Z][A-Za-z0-9]*$",
+      "x-origin": "generated",
+      "x-source": "package export"
+    },
+    "description": {
+      "description": "One sentence: what the component is and what it is for.",
+      "type": "string",
+      "minLength": 1,
+      "x-origin": "authored",
+      "x-source": "components/<name>.md frontmatter: description"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["actions", "inputs", "selection", "navigation", "feedback", "overlay", "layout", "data-display", "media", "utility"],
+      "x-origin": "authored",
+      "x-source": "components/<name>.md frontmatter: category"
+    },
+    "status": {
+      "description": "Lifecycle status of the component itself (not of this documentation).",
+      "type": "string",
+      "enum": ["draft", "beta", "stable", "deprecated"],
+      "x-origin": "authored",
+      "x-source": "components/<name>.md frontmatter: status"
+    },
+
+    "source": {
+      "description": "Where the component lives in code.",
+      "type": "object",
+      "required": ["package", "version", "export", "importPath"],
+      "additionalProperties": false,
+      "x-origin": "generated",
+      "x-source": "package.json + package exports",
+      "properties": {
+        "package": { "type": "string" },
+        "version": { "type": "string" },
+        "export": { "type": "string" },
+        "importPath": { "type": "string", "description": "Exact import statement source, e.g. @org/ui or @org/ui/button." },
+        "file": { "type": "string", "description": "Path of the component source file inside the package." },
+        "generatedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+
+    "options": {
+      "description": "Props whose type is a closed set of values (variant, size, tone...).",
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/option" },
+      "x-origin": "generated",
+      "x-source": "TypeScript prop types (string-literal unions and enums)"
+    },
+    "props": {
+      "description": "All other props: booleans, text, callbacks, slots.",
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/prop" },
+      "x-origin": "generated",
+      "x-source": "TypeScript prop types"
+    },
+
+    "usage": {
+      "type": "object",
+      "required": ["when", "avoid"],
+      "additionalProperties": false,
+      "x-origin": "authored",
+      "properties": {
+        "when": {
+          "type": "array", "minItems": 1, "items": { "type": "string" },
+          "x-source": "components/<name>.md section: ## When to use"
+        },
+        "avoid": {
+          "type": "array", "items": { "type": "string" },
+          "x-source": "components/<name>.md section: ## When not to use"
+        },
+        "alternatives": {
+          "description": "Component names. Each must exist in the package.",
+          "type": "array", "items": { "type": "string" },
+          "x-source": "components/<name>.md frontmatter: alternatives"
+        }
+      }
+    },
+
+    "rationale": {
+      "description": "Why the component is designed this way.",
+      "type": "object",
+      "additionalProperties": false,
+      "x-origin": "authored",
+      "x-source": "components/<name>.md section: ## Why this design",
+      "properties": {
+        "summary": { "type": "string" },
+        "tradeoffs": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "composition": {
+      "type": "object",
+      "additionalProperties": false,
+      "x-origin": "authored",
+      "properties": {
+        "canContain": { "type": "array", "items": { "type": "string" }, "x-source": "frontmatter: can_contain" },
+        "cannotContain": { "type": "array", "items": { "type": "string" }, "x-source": "frontmatter: cannot_contain" },
+        "required": { "type": "array", "items": { "type": "string" }, "x-source": "frontmatter: required_children" },
+        "order": { "type": "string", "x-source": "components/<name>.md section: ## Composition" }
+      }
+    },
+
+    "related": {
+      "type": "array", "items": { "type": "string" },
+      "x-origin": "authored",
+      "x-source": "frontmatter: related"
+    },
+
+    "tokens": {
+      "type": "object",
+      "additionalProperties": false,
+      "x-origin": "generated",
+      "properties": {
+        "used": {
+          "description": "Token paths the component's styles reference.",
+          "type": "array", "items": { "type": "string" },
+          "x-source": "component styles in the package"
+        }
+      }
+    },
+
+    "accessibility": {
+      "type": "object",
+      "required": ["role"],
+      "additionalProperties": false,
+      "x-origin": "authored",
+      "properties": {
+        "role": { "type": "string", "x-source": "frontmatter: a11y_role" },
+        "keyboard": { "type": "array", "items": { "type": "string" }, "x-source": "section: ## Accessibility > ### Keyboard" },
+        "accessibleName": { "type": "string", "x-source": "section: ## Accessibility > ### Accessible name" },
+        "focus": { "type": "string", "x-source": "section: ## Accessibility > ### Focus" },
+        "contrastPairs": {
+          "type": "array",
+          "x-source": "section: ## Accessibility > ### Contrast pairs (table)",
+          "items": {
+            "type": "object",
+            "required": ["foreground", "background", "minRatio"],
+            "additionalProperties": false,
+            "properties": {
+              "foreground": { "type": "string", "description": "Token path." },
+              "background": { "type": "string", "description": "Token path." },
+              "minRatio": { "type": "number", "minimum": 1 },
+              "measured": {
+                "description": "Filled by the contrast check, one entry per mode.",
+                "type": "object",
+                "additionalProperties": { "type": "number" },
+                "x-origin": "generated"
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "figma": {
+      "type": "object",
+      "additionalProperties": false,
+      "x-origin": "authored",
+      "properties": {
+        "url": { "type": "string", "x-source": "frontmatter: figma_url" },
+        "codeConnect": { "type": "string", "description": "Path of the Code Connect file, if one exists.", "x-origin": "generated" },
+        "propMap": {
+          "type": "array",
+          "x-source": "section: ## Figma to code mapping (table)",
+          "items": {
+            "type": "object",
+            "required": ["figmaProperty", "codeProp"],
+            "additionalProperties": false,
+            "properties": {
+              "figmaProperty": { "type": "string" },
+              "figmaValue": { "type": "string" },
+              "codeProp": { "type": "string" },
+              "codeValue": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "examples": {
+      "type": "array",
+      "x-origin": "generated",
+      "x-source": "Storybook index.json or examples/ folder",
+      "items": {
+        "type": "object",
+        "required": ["title", "path"],
+        "additionalProperties": false,
+        "properties": {
+          "title": { "type": "string" },
+          "path": { "type": "string" }
+        }
+      }
+    },
+
+    "deprecated": {
+      "x-origin": "authored",
+      "x-source": "frontmatter: deprecated_by, deprecated_since + section: ## Migration",
+      "oneOf": [
+        { "const": false },
+        {
+          "type": "object",
+          "required": ["replacedBy", "since"],
+          "additionalProperties": false,
+          "properties": {
+            "replacedBy": { "type": "string" },
+            "since": { "type": "string", "description": "Package version." },
+            "migration": { "type": "string" }
+          }
+        }
+      ]
+    },
+
+    "docs": {
+      "description": "Path of the component note.",
+      "type": "string",
+      "x-origin": "generated"
+    },
+
+    "review": {
+      "description": "Review state of the authored fields. draft-ai means an AI wrote it and no person has checked it yet.",
+      "type": "object",
+      "required": ["status"],
+      "additionalProperties": false,
+      "x-origin": "authored",
+      "properties": {
+        "status": { "type": "string", "enum": ["draft-ai", "in-review", "approved"], "x-source": "frontmatter: review_status" },
+        "reviewedBy": { "type": "string", "x-source": "frontmatter: reviewed_by" },
+        "reviewedOn": { "type": "string", "x-source": "frontmatter: reviewed_on" }
+      }
+    }
+  },
+
+  "$defs": {
+    "option": {
+      "type": "object",
+      "required": ["values"],
+      "additionalProperties": false,
+      "properties": {
+        "values": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "default": { "type": "string" },
+        "required": { "type": "boolean" },
+        "description": { "type": "string", "description": "From the JSDoc comment on the prop." }
+      }
+    },
+    "prop": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "type": "string", "description": "TypeScript type as written in the source, e.g. boolean or React.ReactNode." },
+        "required": { "type": "boolean" },
+        "default": {},
+        "description": { "type": "string", "description": "From the JSDoc comment on the prop." },
+        "slot": { "type": "boolean", "description": "True when the prop accepts rendered content (ReactNode)." }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "$description": "Which snapshot of the upstream Magenta repo is in .source/magenta. Written by scripts/update-source.mjs. Do not edit by hand.",
+  "magenta": {
+    "repository": "https://github.com/ocean-network-express/magenta",
+    "branch": "develop",
+    "commit": "5842dc1ddaab4a53d478ff1a5660cf760ebd8825",
+    "path": ".source/magenta",
+    "snapshot": {
+      "file": "magenta-develop.zip",
+      "sha256": "9416a098897cb7f13ba4c78e265975092e5d641500e7e1f16e9460c7e00d143a",
+      "newestFileDate": "2026-10-26 16:42",
+      "importedOn": "2026-10-27"
+    },
+    "packages": {
+      "@ocean-network-express/browserslist-config": {
+        "path": "packages/browserslist-config",
+        "version": null,
+        "published": false
+      },
+      "@ocean-network-express/css": {
+        "path": "packages/css",
+        "version": null,
+        "published": false
+      },
+      "@ocean-network-express/devtools": {
+        "path": "packages/devtools",
+        "version": null,
+        "published": false
+      },
+      "@ocean-network-express/docs": {
+        "path": "packages/docs",
+        "version": null,
+        "published": false
+      },
+      "e2e-tests": {
+        "path": "packages/e2e-tests",
+        "version": null,
+        "published": false
+      },
+      "@ocean-network-express/magenta": {
+        "path": "packages/magenta",
+        "version": "1.2025.220",
+        "published": true
+      },
+      "@ocean-network-express/magenta-commons": {
+        "path": "packages/magenta-commons",
+        "version": null,
+        "published": false
+      },
+      "@ocean-network-express/magenta-react": {
+        "path": "packages/react",
+        "version": "1.32.0",
+        "published": true
+      },
+      "@ocean-network-express/magenta-react-grid": {
+        "path": "packages/react-data-grid",
+        "version": null,
+        "published": false
+      },
+      "@ocean-network-express/magenta-react-dates": {
+        "path": "packages/react-dates",
+        "version": "1.14.0",
+        "published": true
+      },
+      "@ocean-network-express/magenta-react-hooks": {
+        "path": "packages/react-hooks",
+        "version": "0.1.0",
+        "published": false
+      },
+      "@ocean-network-express/magenta-react-icons": {
+        "path": "packages/react-icons",
+        "version": "1.15.0",
+        "published": true
+      },
+      "@ocean-network-express/magenta-react-templates": {
+        "path": "packages/react-templates",
+        "version": null,
+        "published": false
+      },
+      "@ocean-network-express/magenta-react-text-editor": {
+        "path": "packages/react-text-editor",
+        "version": "1.3.1",
+        "published": true
+      }
+    }
+  }
+}

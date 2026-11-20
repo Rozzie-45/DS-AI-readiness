@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mds/schemas/token-extension.schema.json",
+  "title": "MDS token extension",
+  "description": "Shape of $extensions.mds on every token in tokens/*.tokens.json. The rest of each token follows the W3C DTCG format ($type, $value, $description, $deprecated). Written by scripts/build-tokens.mjs (ADR 003).",
+  "type": "object",
+  "required": ["tier", "source", "cssVar", "write", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "tier": {
+      "type": "string",
+      "enum": ["primitive", "semantic", "component"],
+      "x-origin": "generated",
+      "x-source": "the file the token is in"
+    },
+    "component": {
+      "description": "Component name. Required when tier is component.",
+      "type": "string",
+      "x-origin": "generated"
+    },
+    "source": {
+      "description": "Where the token is defined in the Magenta repo, e.g. packages/css/src/tokens.ts.",
+      "type": "string",
+      "x-origin": "generated"
+    },
+    "cssVar": {
+      "description": "The CSS variable Panda emits. Null when there is none: breakpoints are Panda conditions, text styles are applied by the Text recipe.",
+      "type": ["string", "null"],
+      "pattern": "^--[a-z0-9-]+$",
+      "x-origin": "generated",
+      "x-source": "Panda naming: --mag-<category>-<path>"
+    },
+    "write": {
+      "description": "How to reference the token in code.",
+      "type": "object",
+      "required": ["panda"],
+      "additionalProperties": false,
+      "properties": {
+        "panda": { "description": "Value or key in a Panda style object, e.g. 'neutral.900' for color: or textStyle: 'body1'.", "type": "string" },
+        "css": { "description": "Value in plain CSS, e.g. var(--mag-colors-neutral-900).", "type": "string" },
+        "note": { "type": "string" }
+      },
+      "x-origin": "generated"
+    },
+    "px": {
+      "description": "Dimension tokens: the value in px, with 1rem = 16px.",
+      "type": "number",
+      "x-origin": "generated"
+    },
+    "codeValue": {
+      "description": "The value exactly as the code writes it, when $value had to be converted to fit DTCG (e.g. 'transparent', 'none').",
+      "type": "string",
+      "x-origin": "generated"
+    },
+    "status": {
+      "description": "forbidden: a foundation note says MUST NOT use it. The code still has it.",
+      "type": "string",
+      "enum": ["ok", "forbidden"],
+      "x-origin": "authored",
+      "x-source": "MUST NOT sentences in foundations/*.md"
+    },
+    "forbiddenBy": {
+      "description": "The note that forbids the token.",
+      "type": "string",
+      "x-origin": "authored"
+    },
+    "roles": {
+      "description": "What the token is for. One entry per row of a Semantic roles table that names it (ADR 001).",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role", "foundation"],
+        "additionalProperties": false,
+        "properties": {
+          "role": { "type": "string", "x-source": "Role column" },
+          "group": { "type": "string", "x-source": "### heading above the table" },
+          "foundation": { "type": "string", "x-source": "foundations/<name>.md" },
+          "useOn": { "type": "array", "items": { "type": "string" }, "x-source": "Use on column" },
+          "avoidOn": { "type": "array", "items": { "type": "string" }, "x-source": "Don't use on column" },
+          "replacedBy": { "type": "string", "x-source": "Replaced by column" }
+        }
+      },
+      "x-origin": "authored"
+    },
+    "descriptionSource": {
+      "description": "Who wrote $description and roles: team (the note is approved) or ai-draft (nobody has checked it yet).",
+      "type": "string",
+      "enum": ["figma", "team", "ai-draft"],
+      "x-origin": "generated"
+    },
+    "contrast": {
+      "description": "Color tokens: WCAG contrast ratio against each Use on background, truncated to two decimals.",
+      "type": "object",
+      "additionalProperties": { "type": "number", "minimum": 1 },
+      "x-origin": "generated"
+    },
+    "text": {
+      "description": "Text styles: which Text level and size this is, and the viewports where responsive text uses it.",
+      "type": "object",
+      "required": ["level", "size"],
+      "additionalProperties": false,
+      "properties": {
+        "level": { "type": "string" },
+        "size": { "type": "string", "enum": ["sm", "md", "lg"] },
+        "responsiveFrom": { "type": "string" },
+        "responsiveDiffers": { "description": "Values responsive text gets at this size when they differ from size={size}.", "type": "object" }
+      },
+      "x-origin": "generated"
+    },
+    "figma": {
+      "description": "Where the token lives in the Figma library. The Figma variable is generated from this token (ADR 003).",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "variable": { "description": "Variable name, the code path joined by '/'. Null when the token is not a Figma variable.", "type": ["string", "null"] },
+        "style": { "description": "Name of the paint, text or effect style that uses the token.", "type": "string" },
+        "codeSyntax": { "type": "object", "additionalProperties": { "type": "string" } },
+        "scopes": { "type": "array", "items": { "type": "string" } },
+        "hiddenFromPublishing": { "type": "boolean" }
+      },
+      "x-origin": "generated"
+    },
+    "modes": {
+      "description": "Value per non-default mode, e.g. dark. The default mode is $value. Magenta has no modes yet.",
+      "type": "object",
+      "additionalProperties": { "type": "string", "pattern": "^\\{[^}]+\\}$" },
+      "x-origin": "generated"
+    },
+    "replacedBy": {
+      "description": "Token path that replaces this one. Required when $deprecated is set.",
+      "type": "string",
+      "x-origin": "authored",
+      "x-source": "Semantic roles table, column Replaced by"
+    }
+  },
+  "allOf": [
+    {
+      "if": { "required": ["tier"], "properties": { "tier": { "const": "component" } } },
+      "then": { "required": ["component"], "properties": { "component": { "type": "string", "minLength": 1 } } }
+    },
+    {
+      "if": { "required": ["status"], "properties": { "status": { "const": "forbidden" } } },
+      "then": { "required": ["forbiddenBy"] }
+    }
+  ]
+}

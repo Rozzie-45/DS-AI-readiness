@@ -1,0 +1,3747 @@
+{
+ "file": "Magenta-Design System - AI",
+ "fileKey": "m5GWvQiv67rsNlBinvOqlR",
+ "frameId": "40000084:727893",
+ "frame": "Inbound Settings · 1920",
+ "width": 1920,
+ "height": 1080,
+ "nodes": 191,
+ "read": "2026-11-19",
+ "tree": {
+  "name": "Inbound Settings · 1920",
+  "type": "FRAME",
+  "w": 1920,
+  "h": 1080,
+  "layout": {
+   "dir": "column",
+   "gap": 0,
+   "padding": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "align": "MIN MIN"
+  },
+  "sizing": "FIXED FIXED",
+  "fill": "{colors/white}",
+  "children": [
+   {
+    "name": "Gap · App header (product shell, not in Magenta)",
+    "type": "FRAME",
+    "w": 1920,
+    "h": 56,
+    "layout": {
+     "dir": "row",
+     "gap": "24 {spacing/24}",
+     "padding": [
+      0,
+      "24 {spacing/24}",
+      0,
+      "24 {spacing/24}"
+     ],
+     "align": "MIN CENTER"
+    },
+    "sizing": "FILL FIXED",
+    "fill": "{colors/primary/500}",
+    "children": [
+     {
+      "name": "hamburger_menu",
+      "type": "INSTANCE",
+      "w": 24,
+      "h": 24,
+      "set": "hamburger_menu",
+      "variant": {
+       "Style": "outline",
+       "Size": "20"
+      },
+      "props": {},
+      "texts": []
+     },
+     {
+      "name": "one_logo",
+      "type": "INSTANCE",
+      "w": 32,
+      "h": 32,
+      "set": "one_logo",
+      "variant": {
+       "Style": "fill",
+       "Size": "20"
+      },
+      "props": {},
+      "texts": []
+     },
+     {
+      "name": "CHORUS",
+      "type": "TEXT",
+      "w": 60,
+      "h": 24,
+      "text": "CHORUS",
+      "textStyle": "body 1/semibold/text-body1-semibold-lg",
+      "fill": "{colors/white}"
+     },
+     {
+      "name": "spacer",
+      "type": "FRAME",
+      "w": 1468,
+      "h": 1,
+      "sizing": "FILL FIXED",
+      "children": []
+     },
+     {
+      "name": "building",
+      "type": "INSTANCE",
+      "w": 24,
+      "h": 24,
+      "set": "building",
+      "variant": {
+       "Style": "outline",
+       "Size": "20"
+      },
+      "props": {},
+      "texts": []
+     },
+     {
+      "name": "SINHO",
+      "type": "TEXT",
+      "w": 48,
+      "h": 24,
+      "text": "SINHO",
+      "textStyle": "body 1/semibold/text-body1-semibold-lg",
+      "fill": "{colors/white}"
+     },
+     {
+      "name": "notification",
+      "type": "INSTANCE",
+      "w": 24,
+      "h": 24,
+      "set": "notification",
+      "variant": {
+       "Style": "outline",
+       "Size": "20"
+      },
+      "props": {},
+      "texts": []
+     },
+     {
+      "name": "user_circle",
+      "type": "INSTANCE",
+      "w": 24,
+      "h": 24,
+      "set": "user_circle",
+      "variant": {
+       "Style": "outline",
+       "Size": "20"
+      },
+      "props": {},
+      "texts": []
+     }
+    ]
+   },
+   {
+    "name": "Body",
+    "type": "FRAME",
+    "w": 1920,
+    "h": 1024,
+    "layout": {
+     "dir": "row",
+     "gap": 0,
+     "padding": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "align": "MIN MIN"
+    },
+    "sizing": "FILL FILL",
+    "children": [
+     {
+      "name": "Gap · Side navigation (product shell, not in Magenta)",
+      "type": "FRAME",
+      "w": 64,
+      "h": 1024,
+      "layout": {
+       "dir": "column",
+       "gap": "24 {spacing/24}",
+       "padding": [
+        "16 {spacing/16}",
+        0,
+        0,
+        0
+       ],
+       "align": "MIN CENTER"
+      },
+      "sizing": "FIXED FILL",
+      "fill": "{colors/white}",
+      "stroke": "{colors/neutral/200}",
+      "children": [
+       {
+        "name": "vessel_front",
+        "type": "INSTANCE",
+        "w": 24,
+        "h": 24,
+        "set": "vessel_front",
+        "variant": {
+         "Style": "outline",
+         "Size": "20"
+        },
+        "props": {},
+        "texts": []
+       },
+       {
+        "name": "file_edit",
+        "type": "INSTANCE",
+        "w": 24,
+        "h": 24,
+        "set": "file_edit",
+        "variant": {
+         "Style": "outline",
+         "Size": "20"
+        },
+        "props": {},
+        "texts": []
+       },
+       {
+        "name": "gear_setting",
+        "type": "INSTANCE",
+        "w": 24,
+        "h": 24,
+        "set": "gear_setting",
+        "variant": {
+         "Style": "outline",
+         "Size": "20"
+        },
+        "props": {},
+        "texts": []
+       }
+      ]
+     },
+     {
+      "name": "Main",
+      "type": "FRAME",
+      "w": 1856,
+      "h": 1024,
+      "layout": {
+       "dir": "column",
+       "gap": 0,
+       "padding": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "align": "MIN MIN"
+      },
+      "sizing": "FILL FILL",
+      "children": [
+       {
+        "name": "Page header",
+        "type": "FRAME",
+        "w": 1856,
+        "h": 96,
+        "layout": {
+         "dir": "column",
+         "gap": "4 {spacing/4}",
+         "padding": [
+          "24 {spacing/24}",
+          "24 {spacing/24}",
+          "16 {spacing/16}",
+          "24 {spacing/24}"
+         ],
+         "align": "MIN MIN"
+        },
+        "sizing": "FILL HUG",
+        "children": [
+         {
+          "name": "Inbound Settings",
+          "type": "TEXT",
+          "w": 191,
+          "h": 28,
+          "text": "Inbound Settings",
+          "textStyle": "h4/text-h4-lg",
+          "fill": "{colors/neutral/900}"
+         },
+         {
+          "name": "Configure the rules that drive inbound office assignment, priority resolution, and task cut-off timing.",
+          "type": "TEXT",
+          "w": 667,
+          "h": 24,
+          "text": "Configure the rules that drive inbound office assignment, priority resolution, and task cut-off timing.",
+          "textStyle": "body 1/regular/text-body1-regular-lg",
+          "fill": "{colors/neutral/700}"
+         }
+        ]
+       },
+       {
+        "name": "Divider",
+        "type": "INSTANCE",
+        "w": 1856,
+        "h": 1,
+        "set": "Divider",
+        "variant": {
+         "Orientation": "Horizontal"
+        },
+        "props": {},
+        "texts": []
+       },
+       {
+        "name": "Tabs",
+        "type": "FRAME",
+        "w": 1856,
+        "h": 40,
+        "layout": {
+         "dir": "row",
+         "gap": 0,
+         "padding": [
+          "0 {spacing/0}",
+          "16 {spacing/16}",
+          "0 {spacing/0}",
+          "16 {spacing/16}"
+         ],
+         "align": "MIN CENTER"
+        },
+        "sizing": "FILL HUG",
+        "children": [
+         {
+          "name": "Tab item",
+          "type": "INSTANCE",
+          "w": 215,
+          "h": 40,
+          "set": "Tab item",
+          "variant": {
+           "Size": "Large",
+           "State": "Selected",
+           "Indicator": "False",
+           "Action-icon": "False"
+          },
+          "props": {
+           "Swap-action-icon": "trash_delete",
+           "Swap-info-icon": "info_circle",
+           "Show divider": true,
+           "Info icon": false,
+           "Label text": "Inbound Office Setup Rule"
+          },
+          "texts": [
+           "Inbound Office Setup Rule"
+          ],
+          "nested": [
+           "Divider"
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Divider",
+        "type": "INSTANCE",
+        "w": 1856,
+        "h": 1,
+        "set": "Divider",
+        "variant": {
+         "Orientation": "Horizontal"
+        },
+        "props": {},
+        "texts": []
+       },
+       {
+        "name": "Table toolbar",
+        "type": "FRAME",
+        "w": 1856,
+        "h": 72,
+        "layout": {
+         "dir": "row",
+         "gap": "12 {spacing/12}",
+         "padding": [
+          "16 {spacing/16}",
+          "24 {spacing/24}",
+          "16 {spacing/16}",
+          "24 {spacing/24}"
+         ],
+         "align": "MIN CENTER"
+        },
+        "sizing": "FILL HUG",
+        "children": [
+         {
+          "name": "Last sync",
+          "type": "FRAME",
+          "w": 233,
+          "h": 24,
+          "layout": {
+           "dir": "row",
+           "gap": "8 {spacing/8}",
+           "padding": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "align": "MIN CENTER"
+          },
+          "sizing": "HUG HUG",
+          "children": [
+           {
+            "name": "refresh",
+            "type": "INSTANCE",
+            "w": 20,
+            "h": 20,
+            "set": "refresh",
+            "variant": {
+             "Style": "outline",
+             "Size": "20"
+            },
+            "props": {},
+            "texts": []
+           },
+           {
+            "name": "Last sync: dd/mm/yyyy hh:mm",
+            "type": "TEXT",
+            "w": 205,
+            "h": 24,
+            "text": "Last sync: dd/mm/yyyy hh:mm",
+            "textStyle": "body 1/regular/text-body1-regular-lg",
+            "fill": "{colors/neutral/700}"
+           }
+          ]
+         },
+         {
+          "name": "spacer",
+          "type": "FRAME",
+          "w": 1138,
+          "h": 1,
+          "sizing": "FILL FIXED",
+          "children": []
+         },
+         {
+          "name": "Button",
+          "type": "INSTANCE",
+          "w": 94,
+          "h": 40,
+          "set": "Button",
+          "variant": {
+           "Type": "Text + Icon",
+           "Color": "Secondary",
+           "Style": "Outline",
+           "Size": "Large",
+           "State": "Enable"
+          },
+          "props": {
+           "Right icon": false,
+           "Left icon": true,
+           "Swap right icon": "chevron_down",
+           "Swap left icon": "refresh",
+           "Text": "Sync"
+          },
+          "texts": [
+           "Sync"
+          ],
+          "nested": [
+           "refresh"
+          ]
+         },
+         {
+          "name": "Icon button group",
+          "type": "INSTANCE",
+          "w": 118,
+          "h": 40,
+          "set": "Icon button group",
+          "variant": {
+           "Size": "Large",
+           "Button qty": "3",
+           "State": "Disable"
+          },
+          "props": {},
+          "texts": [],
+          "nested": [
+           "Icon button group item",
+           "pen_edit",
+           "file_copy",
+           "trash_delete"
+          ]
+         },
+         {
+          "name": "Button",
+          "type": "INSTANCE",
+          "w": 125,
+          "h": 40,
+          "set": "Button",
+          "variant": {
+           "Type": "Text + Icon",
+           "Color": "Primary",
+           "Style": "Outline",
+           "Size": "Large",
+           "State": "Enable"
+          },
+          "props": {
+           "Right icon": false,
+           "Left icon": true,
+           "Swap right icon": "chevron_down",
+           "Swap left icon": "add",
+           "Text": "Add Rule"
+          },
+          "texts": [
+           "Add Rule"
+          ],
+          "nested": [
+           "add"
+          ]
+         },
+         {
+          "name": "Button",
+          "type": "INSTANCE",
+          "w": 40,
+          "h": 40,
+          "set": "Button",
+          "variant": {
+           "Type": "Icon only",
+           "Color": "Neutral",
+           "Style": "Outline",
+           "Size": "Large",
+           "State": "Enable"
+          },
+          "props": {
+           "Right icon": false,
+           "Left icon": true,
+           "Swap right icon": "chevron_down",
+           "Text": "Button",
+           "Swap left icon": "gear_setting"
+          },
+          "texts": [],
+          "nested": [
+           "gear_setting"
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Table",
+        "type": "FRAME",
+        "w": 1856,
+        "h": 714,
+        "layout": {
+         "dir": "column",
+         "gap": 0,
+         "padding": [
+          0,
+          0,
+          0,
+          0
+         ],
+         "align": "MIN MIN"
+        },
+        "sizing": "FILL FILL",
+        "fill": "{colors/white}",
+        "children": [
+         {
+          "name": "Header row",
+          "type": "FRAME",
+          "w": 1876,
+          "h": 40,
+          "layout": {
+           "dir": "row",
+           "gap": 0,
+           "padding": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "align": "MIN MIN"
+          },
+          "sizing": "HUG FIXED",
+          "fill": "{colors/white}",
+          "stroke": "{colors/neutral/200}",
+          "children": [
+           {
+            "name": "Select all",
+            "type": "FRAME",
+            "w": 48,
+            "h": 40,
+            "layout": {
+             "dir": "row",
+             "gap": 0,
+             "padding": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "align": "CENTER CENTER"
+            },
+            "sizing": "FIXED FIXED",
+            "children": [
+             {
+              "name": "Selection cell",
+              "type": "INSTANCE",
+              "w": 24,
+              "h": 40,
+              "set": "Selection cell",
+              "variant": {
+               "Type": "Checkbox",
+               "Selection": "Unchecked",
+               "State": "Enable"
+              },
+              "props": {},
+              "texts": [],
+              "nested": [
+               "Resizer",
+               "Checkbox item"
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Header cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 39,
+            "set": "Header cell item",
+            "variant": {
+             "Type": "Default",
+             "Divider style": "Short",
+             "Sort-Filter": "True",
+             "Required": "False"
+            },
+            "props": {
+             "Col name": "ID",
+             "Divider": true
+            },
+            "texts": [
+             "ID",
+             "Menu title",
+             "Action",
+             "Group header",
+             "Item value",
+             "Filter 3",
+             "Filter 4",
+             "Filter 5"
+            ],
+            "nested": [
+             "Resizer",
+             "Multi-filter item",
+             "sort_filter_list",
+             "table overflow menu",
+             "Menu header",
+             "Grouped item",
+             "Group list header",
+             "draggable",
+             "anchor_port",
+             "checkmark"
+            ]
+           },
+           {
+            "name": "Header cell item",
+            "type": "INSTANCE",
+            "w": 145,
+            "h": 39,
+            "set": "Header cell item",
+            "variant": {
+             "Type": "Default",
+             "Divider style": "Short",
+             "Sort-Filter": "True",
+             "Required": "False"
+            },
+            "props": {
+             "Col name": "Task Type",
+             "Divider": true
+            },
+            "texts": [
+             "Task Type",
+             "Menu title",
+             "Action",
+             "Group header",
+             "Item value",
+             "Filter 3",
+             "Filter 4",
+             "Filter 5"
+            ],
+            "nested": [
+             "Resizer",
+             "Multi-filter item",
+             "sort_filter_list",
+             "table overflow menu",
+             "Menu header",
+             "Grouped item",
+             "Group list header",
+             "draggable",
+             "anchor_port",
+             "checkmark"
+            ]
+           },
+           {
+            "name": "Header cell item",
+            "type": "INSTANCE",
+            "w": 186,
+            "h": 39,
+            "set": "Header cell item",
+            "variant": {
+             "Type": "Default",
+             "Divider style": "Short",
+             "Sort-Filter": "True",
+             "Required": "True"
+            },
+            "props": {
+             "Col name": "POD Country",
+             "Divider": true
+            },
+            "texts": [
+             "POD Country",
+             "*",
+             "Menu title",
+             "Action",
+             "Group header",
+             "Item value",
+             "Filter 3",
+             "Filter 4"
+            ],
+            "nested": [
+             "Resizer",
+             "Multi-filter item",
+             "sort_filter_list",
+             "table overflow menu",
+             "Menu header",
+             "Grouped item",
+             "Group list header",
+             "draggable",
+             "anchor_port",
+             "checkmark"
+            ]
+           },
+           {
+            "name": "Header cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 39,
+            "set": "Header cell item",
+            "variant": {
+             "Type": "Default",
+             "Divider style": "Short",
+             "Sort-Filter": "True",
+             "Required": "False"
+            },
+            "props": {
+             "Col name": "POD Code",
+             "Divider": true
+            },
+            "texts": [
+             "POD Code",
+             "Menu title",
+             "Action",
+             "Group header",
+             "Item value",
+             "Filter 3",
+             "Filter 4",
+             "Filter 5"
+            ],
+            "nested": [
+             "Resizer",
+             "Multi-filter item",
+             "sort_filter_list",
+             "table overflow menu",
+             "Menu header",
+             "Grouped item",
+             "Group list header",
+             "draggable",
+             "anchor_port",
+             "checkmark"
+            ]
+           },
+           {
+            "name": "Header cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 39,
+            "set": "Header cell item",
+            "variant": {
+             "Type": "Default",
+             "Divider style": "Short",
+             "Sort-Filter": "True",
+             "Required": "False"
+            },
+            "props": {
+             "Col name": "DEL Country",
+             "Divider": true
+            },
+            "texts": [
+             "DEL Country",
+             "Menu title",
+             "Action",
+             "Group header",
+             "Item value",
+             "Filter 3",
+             "Filter 4",
+             "Filter 5"
+            ],
+            "nested": [
+             "Resizer",
+             "Multi-filter item",
+             "sort_filter_list",
+             "table overflow menu",
+             "Menu header",
+             "Grouped item",
+             "Group list header",
+             "draggable",
+             "anchor_port",
+             "checkmark"
+            ]
+           },
+           {
+            "name": "Header cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 39,
+            "set": "Header cell item",
+            "variant": {
+             "Type": "Default",
+             "Divider style": "Short",
+             "Sort-Filter": "True",
+             "Required": "False"
+            },
+            "props": {
+             "Col name": "DEL Code",
+             "Divider": true
+            },
+            "texts": [
+             "DEL Code",
+             "Menu title",
+             "Action",
+             "Group header",
+             "Item value",
+             "Filter 3",
+             "Filter 4",
+             "Filter 5"
+            ],
+            "nested": [
+             "Resizer",
+             "Multi-filter item",
+             "sort_filter_list",
+             "table overflow menu",
+             "Menu header",
+             "Grouped item",
+             "Group list header",
+             "draggable",
+             "anchor_port",
+             "checkmark"
+            ]
+           },
+           {
+            "name": "Header cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 39,
+            "set": "Header cell item",
+            "variant": {
+             "Type": "Default",
+             "Divider style": "Short",
+             "Sort-Filter": "True",
+             "Required": "False"
+            },
+            "props": {
+             "Col name": "BL Customer's Country",
+             "Divider": true
+            },
+            "texts": [
+             "BL Customer's Country",
+             "Menu title",
+             "Action",
+             "Group header",
+             "Item value",
+             "Filter 3",
+             "Filter 4",
+             "Filter 5"
+            ],
+            "nested": [
+             "Resizer",
+             "Multi-filter item",
+             "sort_filter_list",
+             "table overflow menu",
+             "Menu header",
+             "Grouped item",
+             "Group list header",
+             "draggable",
+             "anchor_port",
+             "checkmark"
+            ]
+           },
+           {
+            "name": "Header cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 39,
+            "set": "Header cell item",
+            "variant": {
+             "Type": "Default",
+             "Divider style": "Short",
+             "Sort-Filter": "True",
+             "Required": "False"
+            },
+            "props": {
+             "Col name": "Customer Group",
+             "Divider": true
+            },
+            "texts": [
+             "Customer Group",
+             "Menu title",
+             "Action",
+             "Group header",
+             "Item value",
+             "Filter 3",
+             "Filter 4",
+             "Filter 5"
+            ],
+            "nested": [
+             "Resizer",
+             "Multi-filter item",
+             "sort_filter_list",
+             "table overflow menu",
+             "Menu header",
+             "Grouped item",
+             "Group list header",
+             "draggable",
+             "anchor_port",
+             "checkmark"
+            ]
+           },
+           {
+            "name": "Header cell item",
+            "type": "INSTANCE",
+            "w": 227,
+            "h": 39,
+            "set": "Header cell item",
+            "variant": {
+             "Type": "Default",
+             "Divider style": "Short",
+             "Sort-Filter": "True",
+             "Required": "False"
+            },
+            "props": {
+             "Col name": "Customer Code",
+             "Divider": true
+            },
+            "texts": [
+             "Customer Code",
+             "Menu title",
+             "Action",
+             "Group header",
+             "Item value",
+             "Filter 3",
+             "Filter 4",
+             "Filter 5"
+            ],
+            "nested": [
+             "Resizer",
+             "Multi-filter item",
+             "sort_filter_list",
+             "table overflow menu",
+             "Menu header",
+             "Grouped item",
+             "Group list header",
+             "draggable",
+             "anchor_port",
+             "checkmark"
+            ]
+           },
+           {
+            "name": "Fixed header cell",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 39,
+            "set": "Fixed header cell",
+            "variant": {
+             "Type": "Customizable",
+             "Divider style": "Short",
+             "Sort-Filter": "False",
+             "Required": "False"
+            },
+            "props": {
+             "before shadow": false,
+             "after shadow": true,
+             "Col name": "Action",
+             "Divider": true
+            },
+            "texts": [
+             "Action",
+             "Option"
+            ],
+            "nested": [
+             "Resizer",
+             "Dnd handle",
+             "draggable",
+             "Data table overflow menu item",
+             "menu_more_vertical",
+             "_Menu List",
+             "_Menu item base",
+             "anchor_port",
+             "Menu content item",
+             "add_circle"
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Row 0000001",
+          "type": "FRAME",
+          "w": 1876,
+          "h": 62,
+          "layout": {
+           "dir": "row",
+           "gap": 0,
+           "padding": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "align": "MIN CENTER"
+          },
+          "sizing": "HUG FIXED",
+          "fill": "{colors/white}",
+          "stroke": "{colors/neutral/200}",
+          "children": [
+           {
+            "name": "Select",
+            "type": "FRAME",
+            "w": 48,
+            "h": 62,
+            "layout": {
+             "dir": "row",
+             "gap": 0,
+             "padding": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "align": "CENTER CENTER"
+            },
+            "sizing": "FIXED FIXED",
+            "children": [
+             {
+              "name": "Selection cell",
+              "type": "INSTANCE",
+              "w": 24,
+              "h": 40,
+              "set": "Selection cell",
+              "variant": {
+               "Type": "Checkbox",
+               "Selection": "Unchecked",
+               "State": "Enable"
+              },
+              "props": {},
+              "texts": [],
+              "nested": [
+               "Resizer",
+               "Checkbox item"
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "0000001",
+             "Divider": false
+            },
+            "texts": [
+             "0000001"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 145,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 186,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "VN",
+             "Divider": false
+            },
+            "texts": [
+             "VN"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ],
+            "repeat": 5,
+            "samples": [
+             [
+              "*"
+             ],
+             [
+              "*"
+             ],
+             [
+              "*"
+             ]
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 227,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Fixed cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Fixed cell item",
+            "variant": {
+             "Type": "Swap-slot"
+            },
+            "props": {
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support detail": "Supporting text",
+             "Support text": true,
+             "Swap slot": "Data table overflow menu item",
+             "before shadow": false,
+             "after shadow": true,
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "Option"
+            ],
+            "nested": [
+             "Resizer",
+             "Data table overflow menu item",
+             "menu_more_vertical",
+             "_Menu List",
+             "_Menu item base",
+             "anchor_port",
+             "Menu content item",
+             "add_circle"
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Row 0000002",
+          "type": "FRAME",
+          "w": 1876,
+          "h": 62,
+          "layout": {
+           "dir": "row",
+           "gap": 0,
+           "padding": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "align": "MIN CENTER"
+          },
+          "sizing": "HUG FIXED",
+          "fill": "{colors/white}",
+          "stroke": "{colors/neutral/200}",
+          "children": [
+           {
+            "name": "Select",
+            "type": "FRAME",
+            "w": 48,
+            "h": 62,
+            "layout": {
+             "dir": "row",
+             "gap": 0,
+             "padding": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "align": "CENTER CENTER"
+            },
+            "sizing": "FIXED FIXED",
+            "children": [
+             {
+              "name": "Selection cell",
+              "type": "INSTANCE",
+              "w": 24,
+              "h": 40,
+              "set": "Selection cell",
+              "variant": {
+               "Type": "Checkbox",
+               "Selection": "Unchecked",
+               "State": "Enable"
+              },
+              "props": {},
+              "texts": [],
+              "nested": [
+               "Resizer",
+               "Checkbox item"
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "0000002",
+             "Divider": false
+            },
+            "texts": [
+             "0000002"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 145,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "A/N"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 186,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "VN",
+             "Divider": false
+            },
+            "texts": [
+             "VN"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "VNCMP",
+             "Divider": false
+            },
+            "texts": [
+             "VNCMP"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ],
+            "repeat": 4,
+            "samples": [
+             [
+              "*"
+             ],
+             [
+              "*"
+             ],
+             [
+              "*"
+             ]
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 227,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Fixed cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Fixed cell item",
+            "variant": {
+             "Type": "Swap-slot"
+            },
+            "props": {
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support detail": "Supporting text",
+             "Support text": true,
+             "Swap slot": "Data table overflow menu item",
+             "before shadow": false,
+             "after shadow": true,
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "Option"
+            ],
+            "nested": [
+             "Resizer",
+             "Data table overflow menu item",
+             "menu_more_vertical",
+             "_Menu List",
+             "_Menu item base",
+             "anchor_port",
+             "Menu content item",
+             "add_circle"
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Row 0000003",
+          "type": "FRAME",
+          "w": 1876,
+          "h": 62,
+          "layout": {
+           "dir": "row",
+           "gap": 0,
+           "padding": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "align": "MIN CENTER"
+          },
+          "sizing": "HUG FIXED",
+          "fill": "{colors/white}",
+          "stroke": "{colors/neutral/200}",
+          "children": [
+           {
+            "name": "Select",
+            "type": "FRAME",
+            "w": 48,
+            "h": 62,
+            "layout": {
+             "dir": "row",
+             "gap": 0,
+             "padding": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "align": "CENTER CENTER"
+            },
+            "sizing": "FIXED FIXED",
+            "children": [
+             {
+              "name": "Selection cell",
+              "type": "INSTANCE",
+              "w": 24,
+              "h": 40,
+              "set": "Selection cell",
+              "variant": {
+               "Type": "Checkbox",
+               "Selection": "Unchecked",
+               "State": "Enable"
+              },
+              "props": {},
+              "texts": [],
+              "nested": [
+               "Resizer",
+               "Checkbox item"
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "0000003",
+             "Divider": false
+            },
+            "texts": [
+             "0000003"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 145,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 186,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "AU",
+             "Divider": false
+            },
+            "texts": [
+             "AU"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ],
+            "repeat": 5,
+            "samples": [
+             [
+              "*"
+             ],
+             [
+              "*"
+             ],
+             [
+              "*"
+             ]
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 227,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Fixed cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Fixed cell item",
+            "variant": {
+             "Type": "Swap-slot"
+            },
+            "props": {
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support detail": "Supporting text",
+             "Support text": true,
+             "Swap slot": "Data table overflow menu item",
+             "before shadow": false,
+             "after shadow": true,
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "Option"
+            ],
+            "nested": [
+             "Resizer",
+             "Data table overflow menu item",
+             "menu_more_vertical",
+             "_Menu List",
+             "_Menu item base",
+             "anchor_port",
+             "Menu content item",
+             "add_circle"
+            ]
+           }
+          ],
+          "repeat": 2,
+          "samples": [
+           [
+            "0000004",
+            "*",
+            "AU",
+            "*",
+            "*",
+            "Option"
+           ]
+          ]
+         },
+         {
+          "name": "Row 0000005",
+          "type": "FRAME",
+          "w": 1876,
+          "h": 62,
+          "layout": {
+           "dir": "row",
+           "gap": 0,
+           "padding": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "align": "MIN CENTER"
+          },
+          "sizing": "HUG FIXED",
+          "fill": "{colors/white}",
+          "stroke": "{colors/neutral/200}",
+          "children": [
+           {
+            "name": "Select",
+            "type": "FRAME",
+            "w": 48,
+            "h": 62,
+            "layout": {
+             "dir": "row",
+             "gap": 0,
+             "padding": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "align": "CENTER CENTER"
+            },
+            "sizing": "FIXED FIXED",
+            "children": [
+             {
+              "name": "Selection cell",
+              "type": "INSTANCE",
+              "w": 24,
+              "h": 40,
+              "set": "Selection cell",
+              "variant": {
+               "Type": "Checkbox",
+               "Selection": "Unchecked",
+               "State": "Enable"
+              },
+              "props": {},
+              "texts": [],
+              "nested": [
+               "Resizer",
+               "Checkbox item"
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "0000005",
+             "Divider": false
+            },
+            "texts": [
+             "0000005"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 145,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "A/N"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 186,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "AU",
+             "Divider": false
+            },
+            "texts": [
+             "AU"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ],
+            "repeat": 2,
+            "samples": [
+             [
+              "*"
+             ]
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "VNCMP",
+             "Divider": false
+            },
+            "texts": [
+             "VNCMP"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ],
+            "repeat": 2,
+            "samples": [
+             [
+              "*"
+             ]
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 227,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Fixed cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Fixed cell item",
+            "variant": {
+             "Type": "Swap-slot"
+            },
+            "props": {
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support detail": "Supporting text",
+             "Support text": true,
+             "Swap slot": "Data table overflow menu item",
+             "before shadow": false,
+             "after shadow": true,
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "Option"
+            ],
+            "nested": [
+             "Resizer",
+             "Data table overflow menu item",
+             "menu_more_vertical",
+             "_Menu List",
+             "_Menu item base",
+             "anchor_port",
+             "Menu content item",
+             "add_circle"
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Row 0000006",
+          "type": "FRAME",
+          "w": 1876,
+          "h": 62,
+          "layout": {
+           "dir": "row",
+           "gap": 0,
+           "padding": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "align": "MIN CENTER"
+          },
+          "sizing": "HUG FIXED",
+          "fill": "{colors/white}",
+          "stroke": "{colors/neutral/200}",
+          "children": [
+           {
+            "name": "Select",
+            "type": "FRAME",
+            "w": 48,
+            "h": 62,
+            "layout": {
+             "dir": "row",
+             "gap": 0,
+             "padding": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "align": "CENTER CENTER"
+            },
+            "sizing": "FIXED FIXED",
+            "children": [
+             {
+              "name": "Selection cell",
+              "type": "INSTANCE",
+              "w": 24,
+              "h": 40,
+              "set": "Selection cell",
+              "variant": {
+               "Type": "Checkbox",
+               "Selection": "Unchecked",
+               "State": "Enable"
+              },
+              "props": {},
+              "texts": [],
+              "nested": [
+               "Resizer",
+               "Checkbox item"
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "0000006",
+             "Divider": false
+            },
+            "texts": [
+             "0000006"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 145,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "D/O"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 186,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "AU",
+             "Divider": false
+            },
+            "texts": [
+             "AU"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ],
+            "repeat": 3,
+            "samples": [
+             [
+              "*"
+             ],
+             [
+              "*"
+             ]
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+tag"
+            },
+            "props": {
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Swap slot": "Slot",
+             "Content text": "VN",
+             "Divider": false
+            },
+            "texts": [
+             "VN",
+             "+4 more"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 227,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Fixed cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Fixed cell item",
+            "variant": {
+             "Type": "Swap-slot"
+            },
+            "props": {
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support detail": "Supporting text",
+             "Support text": true,
+             "Swap slot": "Data table overflow menu item",
+             "before shadow": false,
+             "after shadow": true,
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "Option"
+            ],
+            "nested": [
+             "Resizer",
+             "Data table overflow menu item",
+             "menu_more_vertical",
+             "_Menu List",
+             "_Menu item base",
+             "anchor_port",
+             "Menu content item",
+             "add_circle"
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Row 0000007",
+          "type": "FRAME",
+          "w": 1876,
+          "h": 62,
+          "layout": {
+           "dir": "row",
+           "gap": 0,
+           "padding": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "align": "MIN CENTER"
+          },
+          "sizing": "HUG FIXED",
+          "fill": "{colors/white}",
+          "stroke": "{colors/neutral/200}",
+          "children": [
+           {
+            "name": "Select",
+            "type": "FRAME",
+            "w": 48,
+            "h": 62,
+            "layout": {
+             "dir": "row",
+             "gap": 0,
+             "padding": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "align": "CENTER CENTER"
+            },
+            "sizing": "FIXED FIXED",
+            "children": [
+             {
+              "name": "Selection cell",
+              "type": "INSTANCE",
+              "w": 24,
+              "h": 40,
+              "set": "Selection cell",
+              "variant": {
+               "Type": "Checkbox",
+               "Selection": "Unchecked",
+               "State": "Enable"
+              },
+              "props": {},
+              "texts": [],
+              "nested": [
+               "Resizer",
+               "Checkbox item"
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "0000007",
+             "Divider": false
+            },
+            "texts": [
+             "0000007"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 145,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 186,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "BR",
+             "Divider": false
+            },
+            "texts": [
+             "BR"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ],
+            "repeat": 5,
+            "samples": [
+             [
+              "*"
+             ],
+             [
+              "*"
+             ],
+             [
+              "*"
+             ]
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 227,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Fixed cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Fixed cell item",
+            "variant": {
+             "Type": "Swap-slot"
+            },
+            "props": {
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support detail": "Supporting text",
+             "Support text": true,
+             "Swap slot": "Data table overflow menu item",
+             "before shadow": false,
+             "after shadow": true,
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "Option"
+            ],
+            "nested": [
+             "Resizer",
+             "Data table overflow menu item",
+             "menu_more_vertical",
+             "_Menu List",
+             "_Menu item base",
+             "anchor_port",
+             "Menu content item",
+             "add_circle"
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Row 0000008",
+          "type": "FRAME",
+          "w": 1876,
+          "h": 62,
+          "layout": {
+           "dir": "row",
+           "gap": 0,
+           "padding": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "align": "MIN CENTER"
+          },
+          "sizing": "HUG FIXED",
+          "fill": "{colors/white}",
+          "stroke": "{colors/neutral/200}",
+          "children": [
+           {
+            "name": "Select",
+            "type": "FRAME",
+            "w": 48,
+            "h": 62,
+            "layout": {
+             "dir": "row",
+             "gap": 0,
+             "padding": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "align": "CENTER CENTER"
+            },
+            "sizing": "FIXED FIXED",
+            "children": [
+             {
+              "name": "Selection cell",
+              "type": "INSTANCE",
+              "w": 24,
+              "h": 40,
+              "set": "Selection cell",
+              "variant": {
+               "Type": "Checkbox",
+               "Selection": "Unchecked",
+               "State": "Enable"
+              },
+              "props": {},
+              "texts": [],
+              "nested": [
+               "Resizer",
+               "Checkbox item"
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "0000008",
+             "Divider": false
+            },
+            "texts": [
+             "0000008"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 145,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "A/N"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 186,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "BR",
+             "Divider": false
+            },
+            "texts": [
+             "BR"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "VNCMP",
+             "Divider": false
+            },
+            "texts": [
+             "VNCMP"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "VNCMP",
+             "Divider": false
+            },
+            "texts": [
+             "VNCMP"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "G-DE012345",
+             "Divider": false
+            },
+            "texts": [
+             "G-DE012345"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 227,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Fixed cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Fixed cell item",
+            "variant": {
+             "Type": "Swap-slot"
+            },
+            "props": {
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support detail": "Supporting text",
+             "Support text": true,
+             "Swap slot": "Data table overflow menu item",
+             "before shadow": false,
+             "after shadow": true,
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "Option"
+            ],
+            "nested": [
+             "Resizer",
+             "Data table overflow menu item",
+             "menu_more_vertical",
+             "_Menu List",
+             "_Menu item base",
+             "anchor_port",
+             "Menu content item",
+             "add_circle"
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Row 0000009",
+          "type": "FRAME",
+          "w": 1876,
+          "h": 62,
+          "layout": {
+           "dir": "row",
+           "gap": 0,
+           "padding": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "align": "MIN CENTER"
+          },
+          "sizing": "HUG FIXED",
+          "fill": "{colors/white}",
+          "stroke": "{colors/neutral/200}",
+          "children": [
+           {
+            "name": "Select",
+            "type": "FRAME",
+            "w": 48,
+            "h": 62,
+            "layout": {
+             "dir": "row",
+             "gap": 0,
+             "padding": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "align": "CENTER CENTER"
+            },
+            "sizing": "FIXED FIXED",
+            "children": [
+             {
+              "name": "Selection cell",
+              "type": "INSTANCE",
+              "w": 24,
+              "h": 40,
+              "set": "Selection cell",
+              "variant": {
+               "Type": "Checkbox",
+               "Selection": "Unchecked",
+               "State": "Enable"
+              },
+              "props": {},
+              "texts": [],
+              "nested": [
+               "Resizer",
+               "Checkbox item"
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "0000009",
+             "Divider": false
+            },
+            "texts": [
+             "0000009"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 145,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "D/O"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 186,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "BR",
+             "Divider": false
+            },
+            "texts": [
+             "BR"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ],
+            "repeat": 3,
+            "samples": [
+             [
+              "*"
+             ],
+             [
+              "*"
+             ]
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "VN",
+             "Divider": false
+            },
+            "texts": [
+             "VN"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 227,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Fixed cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Fixed cell item",
+            "variant": {
+             "Type": "Swap-slot"
+            },
+            "props": {
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support detail": "Supporting text",
+             "Support text": true,
+             "Swap slot": "Data table overflow menu item",
+             "before shadow": false,
+             "after shadow": true,
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "Option"
+            ],
+            "nested": [
+             "Resizer",
+             "Data table overflow menu item",
+             "menu_more_vertical",
+             "_Menu List",
+             "_Menu item base",
+             "anchor_port",
+             "Menu content item",
+             "add_circle"
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Row 0000010",
+          "type": "FRAME",
+          "w": 1876,
+          "h": 62,
+          "layout": {
+           "dir": "row",
+           "gap": 0,
+           "padding": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "align": "MIN CENTER"
+          },
+          "sizing": "HUG FIXED",
+          "fill": "{colors/white}",
+          "stroke": "{colors/neutral/200}",
+          "children": [
+           {
+            "name": "Select",
+            "type": "FRAME",
+            "w": 48,
+            "h": 62,
+            "layout": {
+             "dir": "row",
+             "gap": 0,
+             "padding": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "align": "CENTER CENTER"
+            },
+            "sizing": "FIXED FIXED",
+            "children": [
+             {
+              "name": "Selection cell",
+              "type": "INSTANCE",
+              "w": 24,
+              "h": 40,
+              "set": "Selection cell",
+              "variant": {
+               "Type": "Checkbox",
+               "Selection": "Unchecked",
+               "State": "Enable"
+              },
+              "props": {},
+              "texts": [],
+              "nested": [
+               "Resizer",
+               "Checkbox item"
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "0000010",
+             "Divider": false
+            },
+            "texts": [
+             "0000010"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 145,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 186,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "BG",
+             "Divider": false
+            },
+            "texts": [
+             "BG"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ],
+            "repeat": 5,
+            "samples": [
+             [
+              "*"
+             ],
+             [
+              "*"
+             ],
+             [
+              "*"
+             ]
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 227,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Fixed cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Fixed cell item",
+            "variant": {
+             "Type": "Swap-slot"
+            },
+            "props": {
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support detail": "Supporting text",
+             "Support text": true,
+             "Swap slot": "Data table overflow menu item",
+             "before shadow": false,
+             "after shadow": true,
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "Option"
+            ],
+            "nested": [
+             "Resizer",
+             "Data table overflow menu item",
+             "menu_more_vertical",
+             "_Menu List",
+             "_Menu item base",
+             "anchor_port",
+             "Menu content item",
+             "add_circle"
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Row 0000011",
+          "type": "FRAME",
+          "w": 1876,
+          "h": 62,
+          "layout": {
+           "dir": "row",
+           "gap": 0,
+           "padding": [
+            0,
+            0,
+            0,
+            0
+           ],
+           "align": "MIN CENTER"
+          },
+          "sizing": "HUG FIXED",
+          "fill": "{colors/white}",
+          "stroke": "{colors/neutral/200}",
+          "children": [
+           {
+            "name": "Select",
+            "type": "FRAME",
+            "w": 48,
+            "h": 62,
+            "layout": {
+             "dir": "row",
+             "gap": 0,
+             "padding": [
+              0,
+              0,
+              0,
+              0
+             ],
+             "align": "CENTER CENTER"
+            },
+            "sizing": "FIXED FIXED",
+            "children": [
+             {
+              "name": "Selection cell",
+              "type": "INSTANCE",
+              "w": 24,
+              "h": 40,
+              "set": "Selection cell",
+              "variant": {
+               "Type": "Checkbox",
+               "Selection": "Unchecked",
+               "State": "Enable"
+              },
+              "props": {},
+              "texts": [],
+              "nested": [
+               "Resizer",
+               "Checkbox item"
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "0000011",
+             "Divider": false
+            },
+            "texts": [
+             "0000011"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 145,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "A/N"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 186,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+icon"
+            },
+            "props": {
+             "Icon": false,
+             "Swap slot": "Slot",
+             "Support text": false,
+             "Swap icon": "container_dry",
+             "Support detail": "Supporting text",
+             "Content text": "BG",
+             "Divider": false
+            },
+            "texts": [
+             "BG"
+            ],
+            "nested": [
+             "Resizer",
+             "container_dry"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 40,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Text+tag"
+            },
+            "props": {
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Swap slot": "Slot",
+             "Content text": "VNCMP",
+             "Divider": false
+            },
+            "texts": [
+             "VNCMP",
+             "+4 more"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 206,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ],
+            "repeat": 4,
+            "samples": [
+             [
+              "*"
+             ],
+             [
+              "*"
+             ],
+             [
+              "*"
+             ]
+            ]
+           },
+           {
+            "name": "Cell item",
+            "type": "INSTANCE",
+            "w": 227,
+            "h": 36,
+            "set": "Cell item",
+            "variant": {
+             "Type": "Tag"
+            },
+            "props": {
+             "Swap slot": "Slot",
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support text": false,
+             "Support detail": "Supporting text",
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "*"
+            ],
+            "nested": [
+             "Resizer",
+             "Tag",
+             "anchor_port"
+            ]
+           },
+           {
+            "name": "Fixed cell item",
+            "type": "INSTANCE",
+            "w": 120,
+            "h": 40,
+            "set": "Fixed cell item",
+            "variant": {
+             "Type": "Swap-slot"
+            },
+            "props": {
+             "Swap icon": "container_dry",
+             "Icon": true,
+             "Support detail": "Supporting text",
+             "Support text": true,
+             "Swap slot": "Data table overflow menu item",
+             "before shadow": false,
+             "after shadow": true,
+             "Content text": "Content",
+             "Divider": false
+            },
+            "texts": [
+             "Option"
+            ],
+            "nested": [
+             "Resizer",
+             "Data table overflow menu item",
+             "menu_more_vertical",
+             "_Menu List",
+             "_Menu item base",
+             "anchor_port",
+             "Menu content item",
+             "add_circle"
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Table footer",
+        "type": "FRAME",
+        "w": 1856,
+        "h": 100,
+        "layout": {
+         "dir": "row",
+         "gap": 0,
+         "padding": [
+          "12 {spacing/12}",
+          "24 {spacing/24}",
+          "12 {spacing/12}",
+          "24 {spacing/24}"
+         ],
+         "align": "MIN MIN"
+        },
+        "sizing": "FILL FIXED",
+        "fill": "{colors/white}",
+        "stroke": "{colors/neutral/200}",
+        "children": [
+         {
+          "name": "Table pagination",
+          "type": "INSTANCE",
+          "w": 1808,
+          "h": 40,
+          "set": "Table pagination",
+          "variant": {
+           "Type": "Editable",
+           "Size": "Large",
+           "Alignment": "Right"
+          },
+          "props": {
+           "Show refresh": false,
+           "Result text": "Total 199 results"
+          },
+          "texts": [
+           "Show 30 items",
+           "Total 199 results",
+           "1",
+           "of 10"
+          ],
+          "nested": [
+           "Single select",
+           "Select field base",
+           "Small icon button",
+           "close_remove",
+           "chevron_down",
+           "Pagination",
+           "Button",
+           "chevron_first",
+           "chevron_left",
+           "Numeric number input"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
